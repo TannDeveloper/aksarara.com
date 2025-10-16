@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500">
+  <defs>
+    <style>
+      .cls-1, .cls-2 {
+        fill: #fff;
+      }
+
+      .cls-2 {
+        fill-rule: evenodd;
+      }
+
+      .cls-3 {
+        letter-spacing: -.03em;
+      }
+
+      .cls-4 {
+        fill: red;
+      }
+
+      .cls-5 {
+        letter-spacing: -.03em;
+      }
+
+      .cls-6 {
+        font-family: CRONOSKIDRegular, CRONOS-KID;
+        font-size: 46.79px;
+      }
+    </style>
+  </defs>
+  <g id="BACKGROUND">
+    <rect class="cls-1" x=".09" y="-.06" width="500" height="500"/>
+  </g>
+  <g id="OBJECTS">
+    <rect class="cls-1" x="-2.32" width="502.32" height="499.3"/>
+    <text class="cls-6" transform="translate(73.1 393.47)"><tspan x="0" y="0">@Aksa</tspan><tspan class="cls-3" x="125.26" y="0">r</tspan><tspan x="145.81" y="0">a</tspan><tspan class="cls-5" x="167.98" y="0">r</tspan><tspan x="188.53" y="0">aofficial</tspan></text>
+    <g>
+      <path class="cls-4" d="M350.28,285.63s-75.21,2.1-100.28,2.1-100.28-2.1-100.28-2.1c-19.42,0-35.32-15.89-35.32-35.32,0,0-2.1-44.19-2.1-58.95s2.1-58.95,2.1-58.95c0-19.42,15.89-35.32,35.32-35.32,0,0,75.21-2.1,100.28-2.1s100.28,2.1,100.28,2.1c19.42,0,35.32,15.89,35.32,35.32,0,0,2.1,44.15,2.1,58.95s-2.1,58.95-2.1,58.95c0,19.42-15.89,35.32-35.32,35.32Z"/>
+      <polygon class="cls-2" points="223.62 234.43 223.62 148.3 293.2 191.36 223.62 234.43"/>
+    </g>
+  </g>
+</svg>

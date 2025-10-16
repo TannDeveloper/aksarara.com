@@ -1,0 +1,389 @@
+@font-face {
+  font-family: "Freude";
+  src: url(asset/Font/Freude.otf);
+}
+
+html { scroll-behavior: smooth; }
+
+/* Efek transparan saat scroll */
+header {
+  transition: background 0.4s ease, box-shadow 0.4s ease;
+}
+
+header.scrolled {
+  background: rgba(255, 255, 255, 0.7); /* semi-transparan */
+  backdrop-filter: blur(30px);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Freude", sans-serif;
+}
+
+body {
+  background: #fafafa;
+  color: #222;
+  overflow-x: hidden;
+}
+
+/* Fade-in animation */
+.section, .hero {
+  opacity: 0;
+  transform: translateY(40px);
+  animation: fadeInUp 0.9s ease forwards;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+@keyframes fadeInUp {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ---------------------- NAVBAR ---------------------- */
+header {
+  position: sticky;
+  top: 0;
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(8px);
+  z-index: 10;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+  transition: background 0.3s ease;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 10px 30px;
+}
+
+.logo img {
+  height: 75px;
+  transition: transform 0.3s ease;
+}
+.logo img:hover { transform: scale(1.05); }
+
+.menu {
+  display: flex;
+  list-style: none;
+  gap: 10px;
+}
+
+.btn {
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-weight: 600;
+  font-size: 15px;
+  color: white;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+  filter: brightness(1.1);
+}
+
+.orange { background-color: #fbbf24; }
+.blue   { background-color: #38bdf8; }
+.red    { background-color: #f87171; }
+.pink   { background-color: #ec4899; }
+
+/* ---------------------- HERO ---------------------- */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(135deg, #b8e3ff 0%, #eaf8ff 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* Gambar tetap full tapi tidak nutupi teks */
+.hero-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  z-index: 1;
+}
+
+/* Teks di tengah layar */
+.hero-text {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: #222;
+  max-width: 700px;
+  padding: 0 20px;
+}
+
+/* Judul utama */
+.hero-text h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.hero-text h1 span {
+  color: #3b82f6; /* warna biru utama */
+}
+
+/* Deskripsi */
+.hero-text p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  color: #444;
+}
+
+/* Tombol mulai eksplorasi */
+.hero-text .btn {
+  margin-top: 30px;
+  font-size: 1.1rem;
+  padding: 12px 28px;
+  border-radius: 30px;
+}
+
+/* ---------------------- SECTIONS ---------------------- */
+.section {
+  width: 100%;
+  min-height: 100vh;
+  padding: 80px 20px 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.section h2 {
+  margin-bottom: 60px;
+}
+
+/* ---------------------- TAGS ---------------------- */
+.tag {
+  display: inline-block;
+  padding: 14px 28px;
+  font-weight: 700;
+  font-size: 26px;
+  border-radius: 25px;
+  color: white;
+  box-shadow: 0 5px 12px rgba(0,0,0,0.1);
+}
+
+.tag.orange { background: linear-gradient(135deg, #fbbf24, #f59e0b); margin-top: 40px; }
+.tag.blue   { background: linear-gradient(135deg, #60a5fa, #3b82f6); margin-top: 40px; }
+.tag.red    { background: linear-gradient(135deg, #fb7185, #ef4444); margin-top: 40px; margin-bottom: -10px;}
+.tag.purple { background: linear-gradient(135deg, #eb62a6, #ec4899); margin-top: 40px; }
+
+/* ---------------------- PRODUCT CARDS ---------------------- */
+#our-product{
+    background-color: #ffeab6;
+}
+
+.product-cards {
+  margin-top: 90px;
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  flex-wrap: wrap;
+}
+
+.product-cards img {
+  background: #fff;
+  border-radius: 25px;
+  width: 220px;
+  padding: 15px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.1);
+}
+.product-cards img:hover {
+  transform: translateY(-10px) rotate(-2deg);
+  box-shadow: 0 16px 25px rgba(0,0,0,0.15);
+}
+
+/* ---------------------- BRAND ---------------------- */
+#brand{
+    background-color: #b2e8ff;
+}
+
+.brand {
+  margin-top: 90px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin-top: 50px;
+}
+
+.brand-card-img {
+  width: 280px;
+  background: white;
+  border-radius: 25px;
+  padding: 30px;
+  text-align: center;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+}
+.brand-card-img:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+}
+
+.brand-card-img img {
+  width: 150px;
+  margin-bottom: 15px;
+}
+.brand-card-img p {
+  font-size: 18px;
+  font-weight: 700;
+  color: #60a5fa;
+}
+
+/* ---------------------- TEAM ---------------------- */
+#our-team{
+  background-color: #ffc3c3;
+}
+
+#our-team h3 {
+  background: linear-gradient(135deg, #fb7185, #ef4444);
+  padding: 15px;
+  color: #fff;
+  border-radius: 25px;
+  margin-bottom: 10px;
+  font-weight: 700;
+  font-size: 28px;
+}
+
+.description {
+  max-width: 800px;
+  margin: 0 auto 40px;
+  font-size: 15px;
+  line-height: 1.6;
+  color: #ffffff;
+}
+
+.team-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+}
+
+.team-card {
+  background: #fff;
+  border-radius: 25px;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.1);
+  padding: 20px;
+  width: 240px;
+  text-align: center;
+  transition: all 0.4s ease;
+}
+.team-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+}
+
+.team-card img {
+  width: 200px;
+  height: 200px;
+  border-radius: 20px;
+  margin-bottom: 15px;
+  transition: transform 0.4s ease;
+}
+.team-card:hover img { transform: scale(1.05); }
+
+.team-card h4 {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 5px;
+}
+.team-card p { font-size: 14px; color: #777; }
+
+/* ---------------------- SOCIAL MEDIA ---------------------- */
+#contact{
+  background-color:#fc9fce ;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 40px;
+}
+
+.social {
+  margin-top: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  font-size: 30px;
+  color: white;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.social:hover {
+  transform: scale(1.1);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.youtube   { background: #ff0000; }
+.instagram { background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fd5949 45%, #d6249f 60%, #285AEB 90%); }
+.tiktok    { background: black; font-size: 34px; }
+.whatsapp  { background: #25d366; }
+.itch      { background: #ed6a5a; }
+
+/* ---------------------- FOOTER ---------------------- */
+footer {
+  text-align: center;
+  padding: 40px 10px;
+  font-size: 13px;
+  color: #666;
+  border-top: 2px solid #e5e5e5;
+  background: #fff;
+}
+.footer-logo { width: 70px; margin-bottom: 10px; }
+
+/* ---------------------- RESPONSIVE ---------------------- */
+@media(max-width: 768px) {
+  .menu {
+  display: none;
+  flex-direction: column;
+  background: white;
+  position: absolute;
+  right: 0;
+  top: 70px;
+  border-radius: 0 0 15px 15px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+  width: 100%; /* <- ini biar lebar penuh layar */
+  padding: 15px 0;
+  animation: slideDown 0.3s ease forwards;
+}
+
+/* efek animasi turun */
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+  .menu.active { display: flex; }
+  .menu li { margin: 10px 0; text-align: center; }
+  .hamburger { display: block; font-size: 28px; cursor: pointer; }
+  .product-cards, .team-cards, .brand { flex-direction: column; align-items: center; }
+}
+  
